@@ -1,4 +1,5 @@
 source "https://rubygems.org"
+gem "nokogiri", ">= 1.6.7.rc"
 
 git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
