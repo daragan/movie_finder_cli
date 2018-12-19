@@ -33,4 +33,3 @@ class MovieFinderCli::Cli_Controller
       input = gets.strip
     end
   end
-end 
