@@ -25,13 +25,8 @@ class MovieFinderCli::Cli_Controller
         puts "Genre: #{movie.genre}"
         puts "Released: #{movie.year}"
         puts "Synopsis: #{movie.synopsis}"
+        puts "link: #{movie.url}"
 
-        puts "Would you like to find out more?"
-        answer = gets.strip
-
-        if ["Y", "YES"].include?(answer.upcase)
-          # how do I get the content for this story?
-          movie.open_in_browser
         end
       end
       puts "Would you like to exit or list again?"
