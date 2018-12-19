@@ -4,6 +4,10 @@ class MovieFinderCli::Movie
   
   @@all = []
   
+  def content 
+    @content ||= MovieFinderCli::Scraper.new(url).scrape_content
+  end 
+  
   def self.all 
     @@all
   end 

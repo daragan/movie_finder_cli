@@ -12,7 +12,6 @@ class MovieFinderCli::Scraper
       movie.year = movie_li.search("h3.lister-item-year text-muted unbold").text
       movie.synopsis = movie_li.search("p.text-muted").text 
       movie.genre = movie_li.search("p.genre").text
-      movie.rating = movie_li.search("p.certificate").text
       
       movie.save 
     end 
