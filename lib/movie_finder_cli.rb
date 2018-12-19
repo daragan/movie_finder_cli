@@ -1,6 +1,7 @@
 require "movie_finder_cli/version"
 require 'nokogiri'
 require 'open-uri'
+require 'pry'
 
 
 module MovieFinderCli
