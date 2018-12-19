@@ -6,9 +6,10 @@ class MovieFinderCli::Scraper
     @doc.search("div.lister-item-content").each do |movie_li|
       movie.url = movie_li.search("h3.lister-item-header a").attr("href") 
       movie.title = movie_li.search("h3.lister-item-header").text
-      movie.year = movie_li.search("lister-item-year text-muted unbold").text
-      
-      
+      movie.year = movie_li.search("h3.lister-item-year text-muted unbold").text
+      movie.synopsis = movie_li.search("p.text-muted").text 
+      movie.genre = movie_li.search("p.genre").text
+      movie.rating = movie_li.search("p.certificate").text
     end 
   end
   

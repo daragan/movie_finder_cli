@@ -1,6 +1,6 @@
 class MovieFinderCli::Movie 
   
-  attr_accessor :title, :content, :summary, :date, :genre, :director, :href
+  attr_accessor :title, :content, :synopsis, :date, :genre, :director, :href
   
   @@all = []
   
