@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["'Azraf Chowdhury'"]
   spec.email         = ["'achowdhur@ltu.edu'"]
 
-  spec.summary       = %q{ find movies from to watch you are bored}
+  spec.summary       = %q{ CLI application displaying information about top movies of all time}
   spec.homepage      = "https://github.com/daragan/movie_finder_cli"
   spec.license       = "MIT"
 
