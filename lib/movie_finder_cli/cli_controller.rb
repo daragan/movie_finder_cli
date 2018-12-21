@@ -30,6 +30,7 @@ class MovieFinderCli::Cli_Controller
         puts "link: #{movie.url}"
         
         puts "would you like to return to list?"
+        puts "input Y or N"
         answer = gets.strip
         if ["Y", "Yes"].include?(answer.upcase)
           list_movies
