@@ -28,9 +28,10 @@ class MovieFinderCli::Cli_Controller
         puts "Released: #{movie.year}"
         puts "Synopsis: #{movie.synopsis}"
         puts "link: #{movie.url}"
+        binding.pry
         end
       end
-      puts "Would you like to exit or list again?"
+      puts "Would you like to exit or view the list again?"
       input = gets.strip
     end
   end

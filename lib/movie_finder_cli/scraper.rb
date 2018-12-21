@@ -11,8 +11,8 @@ class MovieFinderCli::Scraper
       movie.url = "https://imdb.com" + movie_li.search("h3.lister-item-header a").attr("href").value
       movie.title = movie_li.search("h3.lister-item-header a").text
       movie.year = movie_li.search("h3.lister-item-year text-muted unbold").text
-      movie.synopsis = movie_li.search("p.text-muted").text.strip.gsub(/\s+/,' ')
-      movie.genre = movie_li.search("p.genre").text
+      movie.synopsis = movie_li.search("p.text-muted")[1].text.strip.gsub(/\s+/,' ')
+      movie.genre = movie_li.search("p.genre span").text
       movie.save
     end
   end
