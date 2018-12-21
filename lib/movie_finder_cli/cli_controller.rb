@@ -17,7 +17,6 @@ class MovieFinderCli::Cli_Controller
    def menu
     input = ""
     while input != "exit"
-      puts "Which movie would you like to find out more about?"
       input = gets.strip
 
       if input.to_i-1 <= MovieFinderCli::Movie.all.size
@@ -29,10 +28,13 @@ class MovieFinderCli::Cli_Controller
         puts "Released: #{movie.year}"
         puts "Synopsis: #{movie.synopsis}"
         puts "link: #{movie.url}"
-        binding.pry
+
         end
       end
       puts "Would you like to exit or view the list again?"
-      input = gets.strip
+      while input = gets.strip.include?("list")
+      list_movies
+      menu
     end
   end
+end
