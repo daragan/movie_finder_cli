@@ -13,6 +13,7 @@ class MovieFinderCli::Scraper
       movie.year = movie_li.search("h3.lister-item-year text-muted unbold").text
       movie.synopsis = movie_li.search("p.text-muted")[1].text.strip.gsub(/\s+/,' ')
       movie.genre = movie_li.search("p.text-muted span.genre").text.strip.gsub(/\s+/,' ')
+      movie.rating = movie_li.search("p.text-muted span.certificate").text.strip.gsub(/\s+/,' ')
       movie.save
     end
   end

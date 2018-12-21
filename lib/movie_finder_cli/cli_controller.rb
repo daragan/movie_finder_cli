@@ -24,6 +24,7 @@ class MovieFinderCli::Cli_Controller
         movie = MovieFinderCli::Movie.all[input.to_i-1]
 
         puts "Title: #{movie.title}"
+        puts "Rating: #{movie.rating}"
         puts "Genre: #{movie.genre}"
         puts "Released: #{movie.year}"
         puts "Synopsis: #{movie.synopsis}"
