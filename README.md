@@ -22,7 +22,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+You are given a list of movies in which you can navigate through by pressing the corresponding number within the list. You are then given a small description of the film including the rating, genre, title, release year, synopsis and a link in which you can click to open in browser to find out more about the film. Once you have found the description to your liking or wish to look at other films, you can return to the list by submitting "Y" or "N" to exit out of the CLI application.
 
 ## Development
 
