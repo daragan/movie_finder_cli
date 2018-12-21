@@ -28,13 +28,15 @@ class MovieFinderCli::Cli_Controller
         puts "Released: #{movie.year}"
         puts "Synopsis: #{movie.synopsis}"
         puts "link: #{movie.url}"
-
+        
+        puts "would you like to return to list?"
+        answer = gets.strip
+        if ["Y", "Yes"].include?(answer.upcase)
+          list_movies
+        else ["N", "No"].include?(answer.upcase)
+          exit!
         end
       end
-      puts "Would you like to exit or view the list again?"
-      while input = gets.strip.include?("list")
-      list_movies
-      menu
     end
-  end
+  end 
 end
