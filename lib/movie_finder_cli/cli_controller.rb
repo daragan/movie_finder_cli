@@ -19,7 +19,7 @@ class MovieFinderCli::Cli_Controller
     while input != "exit"
       input = gets.strip
 
-      if input.to_i-1 <= MovieFinderCli::Movie.all.size
+      if input.to_i <= MovieFinderCli::Movie.all.size && input.to_i != 0
         movie = MovieFinderCli::Movie.all[input.to_i-1]
 
         puts "Title: #{movie.title}"
@@ -28,7 +28,11 @@ class MovieFinderCli::Cli_Controller
         puts "Released: #{movie.year}"
         puts "Synopsis: #{movie.synopsis}"
         puts "link: #{movie.url}"
-        
+
+      else
+        puts "could not compute"
+      end
+
         puts "would you like to return to list?"
         puts "input Y or N"
         answer = gets.strip
@@ -39,5 +43,4 @@ class MovieFinderCli::Cli_Controller
         end
       end
     end
-  end 
-end
+  end
